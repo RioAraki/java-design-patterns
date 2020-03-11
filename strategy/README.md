@@ -8,6 +8,12 @@ tags:
  - Gang of Four
 ---
 
+## My overview
+Strategy pattern 光看这个代码的例子可能并不那么容易理解背后的motivation，这个 [youtube 视频](https://www.youtube.com/watch?v=v9ejT8FO-7I)
+可能对为什么需要 strategy pattern有所帮助。以这个例子来说，如果例子本身更复杂，比如屠龙勇士有多种不同的职业，并且每个职业有攻击方式、外观、技能等多个methods，
+那本能的我们可能会用oop的思路，把屠龙勇者作为一个 abstract class，里面有攻击方式，外观，技能三个 methods。但这种设计有个问题，即
+不同职业的部分methods相同，比如战士职业和刺客职业的攻击方式是一样的（都是近战），圣骑士和牧师职业的技能是一样的（都是会血），这种不同methods之间的重复组合会
+导致很多重复的代码，那用 strategy pattern可以把所有 method 设计成接口，在对每个接口的不同methods做具体实现。这样最终设计职业时只要调用每个接口下需要的methods就行了。
 ## Also known as
 Policy
 
